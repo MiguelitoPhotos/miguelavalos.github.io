@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotografía - Miguel Avalos Bojorquez</title>
+    <style>
+        body {
+            background-color: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            padding: 2rem;
+            font-size: 2rem;
+            background: linear-gradient(90deg, red, green, blue);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: rgbglow 3s infinite linear;
+        }
+        @keyframes rgbglow {
+            0% { text-shadow: 0 0 5px red; }
+            33% { text-shadow: 0 0 5px green; }
+            66% { text-shadow: 0 0 5px blue; }
+            100% { text-shadow: 0 0 5px red; }
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            padding: 2rem;
+        }
+        .gallery img {
+            width: 300px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            position: relative;
+        }
+        .watermark {
+            position: absolute;
+            bottom: 8px;
+            right: 12px;
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            padding: 2px 6px;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+        .photo-container {
+            position: relative;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <header>Fotografía por Miguel Avalos Bojorquez</header>
+    <section class="gallery">
+        <div class="photo-container">
+            <img src="foto1.jpg" alt="Foto 1">
+            <div class="watermark">© Miguel Avalos Bojorquez</div>
+        </div>
+        <div class="photo-container">
+            <img src="foto2.jpg" alt="Foto 2">
+            <div class="watermark">© Miguel Avalos Bojorquez</div>
+        </div>
+    </section>
+</body>
+</html>
